@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Card, StatCard } from '../components/Card'
 import { ChartCard, BarChartDemo, RadarChartDemo, LineChartDemo } from '../components/Charts'
-import { Filter, Download, Search } from 'lucide-react'
+import { Download, Search } from 'lucide-react'
 
 const verticals = [
   { id: 'healthcare', name: 'Healthcare', accuracy: 94.2, uptime: 99.8, agents: 248, status: 'active' },

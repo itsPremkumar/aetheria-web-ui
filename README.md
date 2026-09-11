@@ -25,7 +25,7 @@ Advanced UI/UX for Vertical AI Showcase. Production-grade frontend built with Re
 ### 4. Accessibility & Responsive
 - **Dark Mode** — Full dark theme with system preference detection
 - **Responsive** — Mobile-first design, works on all screen sizes
-- **Keyboard Navigation** — Focus states, ARIA labels
+- **Keyboard Navigation** — Focus states, ARIA labels, skip-to-content link
 - **Semantic HTML** — Proper landmarks and roles
 
 ## Tech Stack
@@ -54,6 +54,9 @@ npm run build
 
 # Preview production build
 npm run preview
+
+# Lint code
+npm run lint
 ```
 
 ## Project Structure
@@ -63,15 +66,20 @@ src/
 ├── components/
 │   ├── Card.tsx         # Card and StatCard components
 │   ├── Charts.tsx       # 8 chart components + ChartCard
-│   └── Layout.tsx       # Navigation layout with theme toggle
+│   ├── Layout.tsx       # Navigation layout with theme toggle
+│   └── Skeleton.tsx     # Loading skeleton components
 ├── context/
-│   └── ThemeContext.tsx # Dark mode state management
+│   ├── ThemeContext.ts  # Theme context definition
+│   └── ThemeProvider.tsx # Theme state management
+├── hooks/
+│   └── useTheme.ts      # Theme hook
 ├── pages/
 │   ├── Dashboard.tsx    # Overview with stats and charts
 │   ├── DesignSystem.tsx # Tokens, typography, components
 │   ├── Verticals.tsx    # 8 verticals with filters
 │   ├── Analytics.tsx    # Deep-dive with export
-│   └── RealTime.tsx     # Live streaming dashboard
+│   ├── RealTime.tsx     # Live streaming dashboard
+│   └── NotFound.tsx     # 404 page
 ├── App.tsx              # Router setup
 ├── main.tsx             # Entry point
 └── index.css            # Tailwind + custom tokens
@@ -86,6 +94,23 @@ The design system uses CSS custom properties for all tokens:
 - **Surface** — Slate scale (50-950)
 - **Border Radius** — sm, md, lg, xl, 2xl
 - **Shadows** — sm, md, lg, xl
+
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Design System
+![Design System](screenshots/design-system.png)
+
+### Verticals
+![Verticals](screenshots/verticals.png)
+
+### Analytics
+![Analytics](screenshots/analytics.png)
+
+### Real-Time Dashboard
+![Real-Time](screenshots/realtime.png)
 
 ## License
 

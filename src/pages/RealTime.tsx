@@ -9,21 +9,20 @@ interface DataPoint {
   value2: number
 }
 
+function generateInitialData(): DataPoint[] {
+  return Array.from({ length: 20 }, (_, i) => ({
+    name: `${i}`,
+    value: Math.random() * 100 + 50,
+    value2: Math.random() * 80 + 40,
+  }))
+}
+
 export default function RealTime() {
-  const [data, setData] = useState<DataPoint[]>([])
+  const [data, setData] = useState<DataPoint[]>(generateInitialData)
   const [isLive, setIsLive] = useState(true)
   const [latency, setLatency] = useState(42)
   const [connections, setConnections] = useState(128)
   const intervalRef = useRef<number | null>(null)
-
-  useEffect(() => {
-    const initial: DataPoint[] = Array.from({ length: 20 }, (_, i) => ({
-      name: `${i}`,
-      value: Math.random() * 100 + 50,
-      value2: Math.random() * 80 + 40,
-    }))
-    setData(initial)
-  }, [])
 
   useEffect(() => {
     if (isLive) {

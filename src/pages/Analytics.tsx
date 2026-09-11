@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Card } from '../components/Card'
 import { ChartCard, AreaChartDemo, PieChartDemo, ScatterPlotDemo, HeatmapGrid } from '../components/Charts'
-import { Download, Calendar, Filter, RefreshCw } from 'lucide-react'
+import { Download } from 'lucide-react'
 
 const trendData = [
   { name: 'Mon', v1: 2400, v2: 1800 },

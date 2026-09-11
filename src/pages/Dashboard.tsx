@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Card, StatCard } from '../components/Card'
 import { AreaChartDemo, BarChartDemo, PieChartDemo, ChartCard } from '../components/Charts'
-import { TrendingUp, Users, Cpu, Zap, Download, Filter } from 'lucide-react'
+import { TrendingUp, Users, Cpu, Zap, Download } from 'lucide-react'
 
 const areaData = [
   { name: 'Jan', v1: 4000, v2: 2400 },
